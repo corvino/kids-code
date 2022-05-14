@@ -13,13 +13,100 @@
           <h1>Turtles</h1>
         </section>
         <section>
+          <h3>Turtle Drawing</h3>
           <pre><code data-trim data-noescape>
-            # SquareSpiral1.py - Draws a square spiral
             import turtle
             t = turtle.Pen()
             for x in range(100):
                 t.forward(x)
                 t.left(90)
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Turtle Drawing</h3>
+          <pre><code data-trim data-noescape data-line-numbers>
+            import turtle
+            t = turtle.Pen()
+            for x in range(100):
+                t.forward(x)
+                t.left(90)
+          </code></pre>
+          <aside class="notes">
+            1: Import turtles (libraries, LOGO)
+            2: Variable for the "turtle pen" that will draw graphics
+            3: Loop: Repeat instructions, assign to variable
+            4-5: Loop body: indented, moves and turns turtle
+          </aside>
+        </section>
+        <section data-transition="none">
+          <h3>Tweaking the Shape</h3>
+          <pre><code data-trim data-noescape data-line-numbers="5">
+            import turtle
+            t = turtle.Pen()
+            for x in range(100):
+                t.forward(x)
+                t.left(<span style="font-weight: bold; color: blue">91</span>)
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Changing the Drawing</h3>
+          <pre><code data-trim data-noescape data-line-numbers="4">
+            import turtle
+            t = turtle.Pen()
+            for x in range(100):
+                t.circle(x)
+                t.left(91)
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Adding Color</h3>
+          <pre><code data-trim data-noescape data-line-numbers="3">
+            import turtle
+            t = turtle.Pen()
+            t.pencolor("red")
+            for x in range(100):
+                t.forward(x)
+                t.left(91)
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Four-Color Spiral</h3>
+          <pre><code data-trim>
+            import turtle
+            t = turtle.Pen()
+            colors = ["red", "yellow", "blue", "green"]
+            for x in range(100):
+                t.pencolor(colors[x%4])
+                t.forward(x)
+                t.left(91)
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Changing the Background Color</h3>
+          <pre><code data-trim data-noescape data-line-numbers="3">
+            import turtle
+            t = turtle.Pen()
+            turtle.bgcolor("black")
+            colors = ["red", "yellow", "blue", "green"]
+            for x in range(100):
+                t.pencolor(colors[x%4])
+                t.forward(x)
+                t.left(91)
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Changing the Number of Sides</h3>
+          <pre><code data-trim data-noescape data-line-numbers="3">
+            import turtle
+            t = turtle.Pen()
+            turtle.bgcolor("black")
+            sides = 6
+            colors = ["red", "yellow", "blue", "orange", "green", "purple"]
+            for x in range(360):
+                t.pencolor(colors[x%len(colors)])
+                t.forward(x * 3/sides + x)
+                t.left(360/sides + 1)
+                t.width(x*sides/200)
           </code></pre>
         </section>
       </div>
