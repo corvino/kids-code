@@ -1,6 +1,6 @@
 
 import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/solarized.css";
+import "reveal.js/dist/theme/blood.css";
 import "highlight.js/styles/vs2015.css";
 
 import Reveal from "reveal.js";

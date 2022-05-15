@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reveal Vite</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>Variables</h3>
+          <ul>
+            <li class="fragment">
+              <pre><code data-trim data-noescape>
+                >>> name = "Nathan"
+              </code></pre>
+            </li>
+            <li class="fragment">Name "things"</li>
+            <li class="fragment">Container of "things"</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Types</h3>
+          <ul>
+            <li class="fragment">"Kinds" of "things"</li>
+            <li class="fragment">
+              Numbers
+              <pre><code data-trim data-noescape>
+                >>> x = 3
+              </code></pre>
+            </li>
+            <li class="fragment">
+              Strings
+              <pre><code data-trim data-noescape>
+                >>> x = "terraform"
+              </code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Operators</h3>
+          <pre class="fragment"><code data-trim data-noescape>
+            >>> 2 + 3
+          </code></pre>
+          <div class="flex">
+            <div class="flex-col">
+              <ul>
+                <li class="fragment">+</li>
+                <li class="fragment">-</li>
+              </ul>
+            </div>
+            <div class="flex-col">
+              <ul>
+                <li class="fragment">*</li>
+                <li class="fragment">/</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Assignment</h3>
+          <pre><code data-trim data-noescape>
+            >>> x = 3 + 2
+          </code></pre>
+        </section>
+        <section>
+          <h3>Order of Operations</h3>
+          <pre><code data-trim data-noescape>
+            >>> 3 + 2
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Order of Operations</h3>
+          <pre><code data-trim data-noescape>
+            >>> 5 - 7 * (3 + (2+4)/2)
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Order of Operations</h3>
+          <pre><code data-trim data-noescape>
+            >>> (5 - 7) * 3 + (2+4)/2
+          </code></pre>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
