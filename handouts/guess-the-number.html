@@ -1,0 +1,143 @@
+<!-- CSS can be cleaner -->
+<!-- https://www.w3schools.com/howto/howto_css_two_columns.asp -->
+<!-- https://www.w3docs.com/snippets/css/how-to-create-two-inline-block-columns-with-50-width.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/vs.css" />
+
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="./handout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <h1>Guess the Number</h1>
+
+      <h2>Key Concepts</h2>
+
+      <h3>Variables</h3>
+
+      <p>Variables name and hold values. If you assign a value—a number, a string, etc—to a variable you can use the variable name to access that value later. Variables are created and updated with the <b>=</b> character.</p>
+
+      <pre><code data-trim data-noescape data-line-numbers="3">
+        foo = "Hello, coder!"
+        print(foo)
+      </code></pre>
+
+      <h3>Lists</h3>
+
+      <p>Lists contain multiple values. Lists will tell you their size and what their values are. If you try to access a value beyond the size of the List you will get an error.<p>
+
+      <h4>Usage</h4>
+
+      <ul>
+        <li><b>Create</b> a list by putting the values between <b>[</b> and <b>]</b> and separating them by commas.
+          <pre><code data-trim data-noescape data-line-numbers="3">
+            foo = ["flowers", 3, False]
+          </code></pre>
+        </li>
+        <li><b>Access</b> lists values by putting the index number in brackets after the List variable name.
+          <pre><code data-trim data-noescape data-line-numbers="3">
+            foo[1]
+          </code></pre>
+        </li>
+        <li>Add an item to a list with <b>append<b>.
+          <pre><code data-trim data-noescape data-line-numbers="3">
+            foo.append(4)
+            foo # So the REPL displays foo.
+          </code></pre>
+        </li>
+      </ul>
+
+      <h5>Examples</h5>
+
+      <pre><code data-trim data-noescape data-line-numbers="3">
+        # Define Arrays
+        x = [1, 2, 3, 4, 5]
+        y = ["elliot", "oliver", "lola"]
+
+        # Size of arrays
+        len(x)
+        len(y)
+
+        # Values in arrays
+        x[0]
+        y[0]
+        x[3]
+        y[3]
+
+        x[len(x) -1]
+      </code></pre>
+
+      <h3>Random Numbers</h3>
+
+      <p>In order to give different answers you will need something random. Python provides a number of options in its random library. First you must import the function you need—in this case randint. <b>randint</b> is called with <b>randint(a, b)</b> and returns a number that is equal to or greater than a and eqaul to or less than b.
+
+      <pre><code data-trim data-noescape data-line-numbers="3">
+        from random import randint
+
+        # Generate numbers
+        randrange(0,10)
+        randrange(0,10)
+        randrange(0,10)
+
+        # Random range based on array size.
+        randrange(0, len(x))
+        randrange(0, len(x) -1)
+      </code></pre>
+
+      <h3>Loop</h3>
+
+      <p>Use a loop to repeat code more than once. There are various loop forms, and they can check to see if they should continue. For this, use a loop that always continues and use <b>break</b> when you want to exit.</p>
+
+      <pre><code data-trim data-noescape data-line-numbers="3">
+        while(true):
+            # Do some stuff
+            if (done):
+              break
+      </code></pre>
+
+      <h3>Conditionals</h3>
+
+      <p>You will need conditional code to tell the user if their answer was correct, and to determine when to exit the loop. An <b>if</b> statement executes code if the exprtession it is given is true. An <b>if</b> can be followed by <b>elif</b> and <b>else</b>. There can be multiple <b>elif</b>s but <b>else</b> must be the final clause.
+
+      <pre><code data-trim data-noescape data-line-numbers="3">
+        something = False
+        somethingElse = False
+        anotherElse = True
+
+        if (something):
+          print("something")
+        elif (somethingElse):
+          print("somethingElse")
+        elif (anotherElse):
+          print("anotherElse")
+        else:
+          print("else")
+      </code></pre>
+
+      <h2>Problem Breakdown</h2>
+      <ul>
+        <li>Generate the random answer (number between 1 and 100?)</li>
+        <li>Communicate to the user what they are guessing (number between 1 and 100?)</li>
+        <li>Ask the user for a guess.</li>
+        <li>Check the guess against the answer.</li>
+        <li>Communicate whether the answer was correct, too small, or too large.</li>
+        <li>Finish if correct.</li>
+        <li>Go back to asking for a guess if incorrect.</li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

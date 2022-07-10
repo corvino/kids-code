@@ -1,0 +1,44 @@
+:root {
+    --r-heading-text-transform: none;
+}
+
+.reveal-viewport {
+    overflow: auto;
+}
+
+.reveal {
+  text-align: left;
+  padding: 25px;
+}
+
+.reveal pre {
+  box-shadow: none;
+}
+
+.reveal h1 {
+    text-align: center;
+}
+
+.reveal h2 {
+    margin-left: 10px;
+}
+
+.reveal h3 {
+    margin-left: 25px;
+}
+
+.reveal h4 {
+    margin-left: 40px;
+}
+
+.reveal h5 {
+    margin-left: 60px;
+}
+
+.reveal h6 {
+    margin-left: 80px;
+}
+
+.reveal p {
+    margin-left: 50px;
+}
