@@ -4,84 +4,98 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script type="module" src="/@vite/client"></script>
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<head>
+  <script type="module" src="/@vite/client"></script>
 
-    <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css" />
-    <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css" />
-    <link rel="stylesheet" href="../node_modules/highlight.js/styles/vs.css" />
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="./handout.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess the Number</title>
-  </head>
-  <body>
-    <div class="reveal">
-      <h1>Guess the Number</h1>
+  <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css" />
+  <link rel="stylesheet" href="../node_modules/highlight.js/styles/vs.css" />
 
-      <h2>Key Concepts</h2>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="./handout.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+</head>
 
+<body>
+  <div class="reveal">
+    <h1>Guess the Number</h1>
+
+    <p>You are going to write a program that asks a user to guess a number between 1 and 100. It will tell the user if there guess was larger or smaller than the secret number, and let them keep guessing until they guess the number.</p>
+
+    <p>Before starting the problem, here are some key Python concepts you will need to write this App.</p>
+
+    <h2>Key Concepts</h2>
+
+    <div class="subsection">
       <h3>Variables</h3>
+      <div class="subsection">
+        <p>Variables name and hold values. If you assign a value—a number, a string, etc—to a variable you can use the
+          variable name to access that value later. Variables are created and updated with the <b>=</b> character.</p>
 
-      <p>Variables name and hold values. If you assign a value—a number, a string, etc—to a variable you can use the variable name to access that value later. Variables are created and updated with the <b>=</b> character.</p>
-
-      <pre><code data-trim data-noescape data-line-numbers="3">
-        foo = "Hello, coder!"
-        print(foo)
-      </code></pre>
+        <pre><code data-trim data-noescape data-line-numbers="3">
+            foo = "Hello, coder!"
+            print(foo)
+        </code></pre>
+      </div>
 
       <h3>Lists</h3>
+      <div class="subsection">
+        <p>Lists contain multiple values. Lists will tell you their size and what their values are. If you try to access a
+          value beyond the size of the List you will get an error.
+        <p>
 
-      <p>Lists contain multiple values. Lists will tell you their size and what their values are. If you try to access a value beyond the size of the List you will get an error.<p>
+        <h4>Usage</h4>
 
-      <h4>Usage</h4>
+        <ul>
+          <li><b>Create</b> a list by putting the values between <b>[</b> and <b>]</b> and separating them by commas.
+            <pre><code data-trim data-noescape data-line-numbers="3">
+              foo = ["flowers", 3, False]
+            </code></pre>
+          </li>
+          <li><b>Access</b> lists values by putting the index number in brackets after the List variable name.
+            <pre><code data-trim data-noescape data-line-numbers="3">
+              foo[1]
+            </code></pre>
+          </li>
+          <li>Add an item to a list with <b>append</b>.
+                <pre><code data-trim data-noescape data-line-numbers="3">
+              foo.append(4)
+              foo # So the REPL displays foo.
+            </code></pre>
+          </li>
+        </ul>
 
-      <ul>
-        <li><b>Create</b> a list by putting the values between <b>[</b> and <b>]</b> and separating them by commas.
-          <pre><code data-trim data-noescape data-line-numbers="3">
-            foo = ["flowers", 3, False]
-          </code></pre>
-        </li>
-        <li><b>Access</b> lists values by putting the index number in brackets after the List variable name.
-          <pre><code data-trim data-noescape data-line-numbers="3">
-            foo[1]
-          </code></pre>
-        </li>
-        <li>Add an item to a list with <b>append<b>.
-          <pre><code data-trim data-noescape data-line-numbers="3">
-            foo.append(4)
-            foo # So the REPL displays foo.
-          </code></pre>
-        </li>
-      </ul>
+        <h5>Examples</h5>
 
-      <h5>Examples</h5>
+        <pre><code data-trim data-noescape data-line-numbers="3">
+          # Define Lists
+          x = [1, 2, 3, 4, 5]
+          y = ["elliot", "oliver", "lola"]
 
-      <pre><code data-trim data-noescape data-line-numbers="3">
-        # Define Arrays
-        x = [1, 2, 3, 4, 5]
-        y = ["elliot", "oliver", "lola"]
+          # Size of arrays
+          len(x)
+          len(y)
 
-        # Size of arrays
-        len(x)
-        len(y)
+          # Values in arrays
+          x[0]
+          y[0]
+          x[3]
+          y[3]
 
-        # Values in arrays
-        x[0]
-        y[0]
-        x[3]
-        y[3]
+          x[len(x) -1]
+        </code></pre>
+      </div>
 
-        x[len(x) -1]
-      </code></pre>
-
-      <h3>Random Numbers</h3>
-
-      <p>In order to give different answers you will need something random. Python provides a number of options in its random library. First you must import the function you need—in this case randint. <b>randint</b> is called with <b>randint(a, b)</b> and returns a number that is equal to or greater than a and eqaul to or less than b.
+    <h3>Random Numbers</h3>
+    <div class="subsection">
+      <p>In order to give different answers you will need something random. Python provides a number of options in its
+        random library. First you must import the function you need—in this case randint. <b>randint</b> is called with
+        <b>randint(a, b)</b> and returns a number that is equal to or greater than a and eqaul to or less than b.</p>
 
       <pre><code data-trim data-noescape data-line-numbers="3">
         from random import randint
@@ -95,21 +109,14 @@
         randrange(0, len(x))
         randrange(0, len(x) -1)
       </code></pre>
+    </div>
 
-      <h3>Loop</h3>
+    <h3>Conditionals</h3>
+    <div class="subsection">
 
-      <p>Use a loop to repeat code more than once. There are various loop forms, and they can check to see if they should continue. For this, use a loop that always continues and use <b>break</b> when you want to exit.</p>
-
-      <pre><code data-trim data-noescape data-line-numbers="3">
-        while(true):
-            # Do some stuff
-            if (done):
-              break
-      </code></pre>
-
-      <h3>Conditionals</h3>
-
-      <p>You will need conditional code to tell the user if their answer was correct, and to determine when to exit the loop. An <b>if</b> statement executes code if the exprtession it is given is true. An <b>if</b> can be followed by <b>elif</b> and <b>else</b>. There can be multiple <b>elif</b>s but <b>else</b> must be the final clause.
+      <p>You will need conditional code to tell the user if their answer was correct, and to determine when to exit the
+        loop. An <b>if</b> statement executes code if the exprtession it is given is true. An <b>if</b> can be followed by
+        <b>elif</b> and <b>else</b>. There can be multiple <b>elif</b>s but <b>else</b> must be the final clause.
 
       <pre><code data-trim data-noescape data-line-numbers="3">
         something = False
@@ -126,18 +133,81 @@
           print("else")
       </code></pre>
 
-      <h2>Problem Breakdown</h2>
-      <ul>
-        <li>Generate the random answer (number between 1 and 100?)</li>
-        <li>Communicate to the user what they are guessing (number between 1 and 100?)</li>
-        <li>Ask the user for a guess.</li>
-        <li>Check the guess against the answer.</li>
-        <li>Communicate whether the answer was correct, too small, or too large.</li>
-        <li>Finish if correct.</li>
-        <li>Go back to asking for a guess if incorrect.</li>
+      <p>The <i>something</i> in the <b>if</b> statement is either <b>True</b> or <b>False</b>. To compare numbers and produce a <i>boolean</i> (<b>True</b> or <b>False</b>) value, you use <i>comparison operators</i>.</p>
+
+      <dl>
+        <dt>==</dt><dd>Equal; returns True if the two numbers are the same.</dd>
+        <dt>&gt;</dt><dd>Greater than; returns True if the first number is greater than the second.</dd>
+        <dt>&lt;</dt><dd>Less than; returns True if the first number is less than the second.</dd>
+        <dt>&gt;=</dt><dd>Greater than or equal; returns True if the first number is greater than <i>or equal to</i> the second.</dd>
+        <dt>&lt;=</dt><dd>Less than or equal; returns True if the first number is less than <i>or equal to</i> the second.</dd>
       </ul>
+
+      <pre><code data-trim data-noescape data-line-numbers="3">
+        x = 1
+        y = 2
+        z = 2
+
+        if (x &gt y):
+          print("x is greater than than y") # will not print
+        elif (x &lt; y):
+          print("x is less than y") # will print
+        else:
+          print("x is equal to y") # will not print (why?)
+
+        if (y &lt; z):
+          print("y is less than z") # will not print
+        if (y &lt= z):
+          print("y is less than or equal to z") # will print
+
+      </code></pre>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-  </body>
+
+    <h3>Loops</h3>
+
+    <div class="subsection">
+      <p>Use a loop to repeat code more than once. There are various loop forms, and they can check to see if they should
+        continue. For this, use a loop that always continues and use <b>break</b> when you want to exit.</p>
+
+      <pre><code data-trim data-noescape data-line-numbers="3">
+          while(true):
+              # Do some stuff
+              if (done):
+                break
+        </code></pre>
+      </div>
+    </div>
+
+    <h1 style="page-break-before: always;">Guess the Number</h1>
+
+    <p>You are going to write a program that asks a user to guess a number between 1 and 100. It will tell the user if there guess was larger or smaller than the secret number, and let them keep guessing until they guess the number.</p>
+
+    <p>Start out by setting picking the secret number, then prompt the user and give them feedback until they get the correct answer.</p>
+
+    <p><i>This is very much like the logic used in your favorite video games!</i></p>
+
+
+    <h2>Suggested Steps</h2>
+    <ul>
+      <li>Generate the random answer (number between 1 and 100?)</li>
+      <li>Communicate to the user what they are guessing (number between 1 and 100?)</li>
+      <li>Ask the user for a guess.</li>
+      <li>Check the guess against the answer.</li>
+      <li>Communicate whether the answer was correct, too small, or too large.</li>
+      <li>Finish if correct.</li>
+      <li>Go back to asking for a guess if incorrect.</li>
+    </ul>
+
+
+    <h2>Challenges</h2>
+    <ul>
+      <li>Let the user specify the range (the smallest and largest numbers) the correct answer can be. What will you do if the user gives you a range where the first number is smaller than the second? What will you do it the user does not give you a number?</li>
+      <li>Tell the user how many guesses it took them to get the answer.</li>
+      <li>Keep track of all the users guesses and show them when the user gets the correct answer. You could even make fun of really bad guesses, and celebrate when users don't need many guesses!</li>
+    </ul>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
 </html>

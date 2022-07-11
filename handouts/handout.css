@@ -1,5 +1,10 @@
 :root {
     --r-heading-text-transform: none;
+    --r-heading-margin: 20px 0 20px 0;
+}
+
+body {
+  margin: 0 5%;
 }
 
 .reveal-viewport {
@@ -11,34 +16,50 @@
   padding: 25px;
 }
 
+.subsection {
+    margin: 50px 50px;
+}
+
 .reveal pre {
   box-shadow: none;
 }
 
+.reveal pre code {
+  overflow: visible;
+}
+
 .reveal h1 {
     text-align: center;
+    padding-top: 50px;
+    margin: 100px 50px;
 }
 
 .reveal h2 {
-    margin-left: 10px;
+    margin-top: 50px;
 }
 
-.reveal h3 {
-    margin-left: 25px;
-}
+@media print {
+  :root {
+    --r-block-margin: 0px;
+  }
 
-.reveal h4 {
-    margin-left: 40px;
-}
+  html:not(.print-pdf) h1 {
+    text-align: center;
+  }
 
-.reveal h5 {
-    margin-left: 60px;
-}
+  html:not(.print-pdf) dl {
+      font-size: 20pt !important;
+  }
 
-.reveal h6 {
-    margin-left: 80px;
-}
+  html:not(.print-pdf) p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
 
-.reveal p {
-    margin-left: 50px;
+  html:not(.print-pdf) .reveal pre,
+  html:not(.print-pdf) .reveal pre code {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+  }
 }
